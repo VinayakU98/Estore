@@ -93,6 +93,7 @@ def processOrder(request):
             state=data["shipping"]["state"],
             zipcode=data["shipping"]["zipcode"],
         )
+        ShippingAdress.save()
 
     return JsonResponse("Payment submitted..", safe=False)
 
